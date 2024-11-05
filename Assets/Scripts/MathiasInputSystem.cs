@@ -30,7 +30,8 @@ public class MathiasInputSystem : MonoBehaviour
 
         var mousePositionInWorldSpace = Camera.main.ScreenToWorldPoint(mousePosition);
         mousePositionInWorldSpace.z = 0;
-        mousePositionInWorldSpace.y = _playerPosition;
+        mousePositionInWorldSpace.y = Mathf.Clamp(mousePositionInWorldSpace.y, bottomLeftBoundary.y + .5f, topRightBoundary.y - .5f);
+        transform.position = mousePositionInWorldSpace;
         mousePositionInWorldSpace.x = Mathf.Clamp(mousePositionInWorldSpace.x, bottomLeftBoundary.x + .5f, topRightBoundary.x - .5f);
         transform.position = mousePositionInWorldSpace;
     }
