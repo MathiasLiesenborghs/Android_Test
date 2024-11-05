@@ -8,7 +8,7 @@ public class MathiasSpawner : MonoBehaviour
     public float spawnRateMin = 1f; 
     public float spawnRateMax = 3f; 
     public float objectSpeed = 2f; 
-    public float spawnHeight = 10f; 
+    public float spawnHeight = -10f; 
 
 
     private void Start()
