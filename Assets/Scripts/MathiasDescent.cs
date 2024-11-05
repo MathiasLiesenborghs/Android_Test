@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class MathiasDescent : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private float speed;
+
+    public void setSpeed(float newSpeed)
     {
-        
+        speed = newSpeed;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        transform.position += Vector3.down * speed * Time.deltaTime;
+
+        if (transform.position.y < -Screen.height / 2f)
+        {
+            Destroy(gameObject);
+        }
     }
 }
