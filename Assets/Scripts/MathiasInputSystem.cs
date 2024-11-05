@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class MathiasInputSystem : MonoBehaviour
 {
+    [SerializeField] private float _playerPosition;
     void Update()
     {
+
         
         if (Input.touchCount > 0) 
         {
@@ -19,6 +22,17 @@ public class MathiasInputSystem : MonoBehaviour
         {
             MoveObject(Input.mousePosition);
         }
+
+        var mousePosition = Input.mousePosition;
+
+        var bottomLeftBoundary = Camera.main.ViewportToWorldPoint(Vector3.zero);
+        var topRightBoundary = Camera.main.ViewportToWorldPoint(Vector3.one);
+
+        var mousePositionInWorldSpace = Camera.main.ScreenToWorldPoint(mousePosition);
+        mousePositionInWorldSpace.z = 0;
+        mousePositionInWorldSpace.y = _playerPosition;
+        mousePositionInWorldSpace.x = Mathf.Clamp(mousePositionInWorldSpace.x, bottomLeftBoundary.x + .5f, topRightBoundary.x - .5f);
+        transform.position = mousePositionInWorldSpace;
     }
 
     void MoveObject(Vector3 inputPosition)
