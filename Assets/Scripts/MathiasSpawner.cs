@@ -33,7 +33,7 @@ public class MathiasSpawner : MonoBehaviour
     private void SpawnObject()
     {
         
-        float randomX = Random.Range(-Screen.width / 2f, Screen.width / 2f);
+        float randomX = Random.Range(-Screen.width / -6f, Screen.width / 1f);
         Vector3 spawnPosition = new Vector3(randomX, spawnHeight, 0f);
 
         
@@ -54,7 +54,7 @@ public class MathiasSpawner : MonoBehaviour
         Vector3 startPosition = obj.transform.position;
 
         
-        float endY = -Screen.height / 2f;
+           float endY = -Screen.height / 1f;
 
         
         while (obj.transform.position.y > endY)
