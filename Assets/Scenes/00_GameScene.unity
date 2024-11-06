@@ -352,7 +352,6 @@ GameObject:
   - component: {fileID: 762768118}
   - component: {fileID: 762768117}
   - component: {fileID: 762768119}
-  - component: {fileID: 762768121}
   m_Layer: 0
   m_Name: PlayerTester
   m_TagString: Untagged
@@ -440,51 +439,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerPosition: 0
---- !u!61 &762768121
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 762768116}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 2}
-    newSize: {x: 1, y: 2}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 2}
-  m_EdgeRadius: 0
 --- !u!1 &1043460906
 GameObject:
   m_ObjectHideFlags: 0
@@ -597,11 +551,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d57cf9e8058cfa4ea9649935174ccec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectPrefab: {fileID: 9145292888400477105, guid: c2d3214d06201e74cb01b5cbfcede2a6, type: 3}
+  objectPrefab: {fileID: 8231151022446730452, guid: ba0a666713273184c8ba839d17ec1e9e, type: 3}
   spawnRateMin: 1
-  spawnRateMax: 3
+  spawnRateMax: 2
   objectSpeed: 5
-  spawnHeight: 1
+  spawnHeight: 15
 --- !u!1 &1211000108
 GameObject:
   m_ObjectHideFlags: 0
