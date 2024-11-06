@@ -8,10 +8,10 @@ public class MathiasDespawn : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(DisparaitreAprèsTemps());
+        StartCoroutine(LifeTime());
     }
 
-    IEnumerator DisparaitreAprèsTemps()
+    IEnumerator LifeTime()
     {
         yield return new WaitForSeconds(lifeTime);
 
