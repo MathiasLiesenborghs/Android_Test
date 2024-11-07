@@ -517,6 +517,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1075811567}
   - component: {fileID: 1075811568}
+  - component: {fileID: 1075811569}
   m_Layer: 0
   m_Name: EnnemySpawner
   m_TagString: Untagged
@@ -555,6 +556,23 @@ MonoBehaviour:
   spawnRateMin: 1
   spawnRateMax: 2
   objectSpeed: 5
+  spawnHeight: 15
+--- !u!114 &1075811569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1075811565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d57cf9e8058cfa4ea9649935174ccec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectPrefab: {fileID: 6296753909334715621, guid: 26a038f91280d924fb71c458726a3474, type: 3}
+  spawnRateMin: 1
+  spawnRateMax: 5
+  objectSpeed: 3
   spawnHeight: 15
 --- !u!1 &1211000108
 GameObject:
